@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build WebGL headlessly and push to itch. Close the Unity editor first (it locks the project).
+# Build WebGL headlessly and push to itch and GitHub Pages. Close the Unity editor first (it locks the project).
 # Usage: ./deploy.sh            build + push
 #        ./deploy.sh --no-build push existing WebBuild
 set -e
@@ -17,3 +17,12 @@ if [ "$1" != "--no-build" ]; then
 fi
 
 "$BUTLER" push WebBuild "$ITCH_TARGET"
+
+# Also publish to GitHub Pages (gh-pages branch), which the Amanzi site embeds.
+PAGES=$(mktemp -d)
+cp -r WebBuild/. "$PAGES"
+git -C "$PAGES" init -q -b gh-pages
+git -C "$PAGES" add -A
+git -C "$PAGES" commit -q -m "WebGL build $(git rev-parse --short HEAD)"
+git -C "$PAGES" push -q -f "$(git remote get-url origin)" gh-pages
+rm -rf "$PAGES"
