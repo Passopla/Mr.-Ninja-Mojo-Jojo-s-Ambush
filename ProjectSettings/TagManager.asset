@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Object
+  - CloudPlatform
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Ground
+  - Water
+  - UI
+  - Platform
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: 1Sky
+    uniqueID: 1072113561
+    locked: 0
+  - name: 2FarTree
+    uniqueID: 2061713533
+    locked: 0
+  - name: 3FarTree
+    uniqueID: 115276511
+    locked: 0
+  - name: 4MidTree
+    uniqueID: 2032561107
+    locked: 0
+  - name: 5FrontTree
+    uniqueID: 4236406063
+    locked: 0
+  - name: Player
+    uniqueID: 2834110263
+    locked: 0
+  m_RenderingLayers:
+  - Default
